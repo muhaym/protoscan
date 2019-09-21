@@ -1,0 +1,7 @@
+
+<div class="container">
+    <p class="alert">{{responseMessage}}</p>
+  <div class="scanner">
+    <zxing-scanner #scanner (scanSuccess)="scanSuccess($event)"></zxing-scanner>
+  </div>
+  </div>
