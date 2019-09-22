@@ -4,7 +4,7 @@ import { DataentryComponent } from './dataentry/dataentry.component';
 import { ScannerComponent } from './scanner/scanner.component';
 
 
-const routes: Routes = [{path:'', component: ScannerComponent },{path:'dataentry', component:DataentryComponent}];
+const routes: Routes = [{ path: '', component: ScannerComponent }, { path: 'dataentry', component: DataentryComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

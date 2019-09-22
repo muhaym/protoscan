@@ -19,7 +19,7 @@ import { ScannerComponent } from './scanner/scanner.component';
     AppRoutingModule,
     ZXingScannerModule
   ],
-  providers: [],
+  providers: [ScannerComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

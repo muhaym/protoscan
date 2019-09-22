@@ -19,26 +19,24 @@ export class ScannerComponent implements OnInit {
   @ViewChild('scanner', { static: false })
   scanner: ZXingScannerModule;
   title = 'ProtoScan';
-  responseMessage = "Scan to Continue";
+  responseMessage = 'Scan to Continue';
   ScanSubject = new Subject<any>();
-  constructor(private Router: Router) {
-
+  onScan = this.ScanSubject.asObservable();
+  constructor(private router: Router) {
 
   }
   scanSuccess(event: string) {
-    let qr = event;
-    console.log(qr);
+    const qr = event;
     try {
-      let parse: ScanObject = JSON.parse(qr);
-      let nav: NavigationExtras = {
-        queryParams: { params: JSON.stringify(parse) }
-      }
-      this.Router.navigate(['dataentry'], nav);
-    }
-    catch (e) {
+      const parse: ScanObject = JSON.parse(qr);
+      const nav: NavigationExtras = {
+        queryParams: { params: JSON.stringify(parse) }, skipLocationChange: true
+      };
+      this.router.navigate(['dataentry'], nav);
+    } catch (e) {
       console.log(e);
-      this.responseMessage = "Invalid QR";
-      setTimeout(() => { this.responseMessage = "Scan to Continue" }, 5000);
+      this.responseMessage = 'Invalid QR';
+      setTimeout(() => { this.responseMessage = 'Scan to Continue'; }, 5000);
 
     }
   }
