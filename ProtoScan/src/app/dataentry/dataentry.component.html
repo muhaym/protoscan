@@ -1,7 +1,7 @@
 <div class="container">
+        <p *ngIf="data" class="pc" >{{ data.zone }}</p>
+        <p *ngIf="data" class="pp" >{{ data.fixtureName }}</p>
   <div class="content">
-    <p *ngIf="data" class="pp" >Fixture: {{ data.fixtureName }}</p>
-    <p *ngIf="data" class="pc" >Zone: {{ data.zone }}</p>
     <div class="field">
       <div>
         <p>Select Departments</p>
@@ -12,19 +12,19 @@
           <option>DRESS</option>
         </select>
         <select aria-placeholder="Department1">
-          <option disabled selected>DEPARTMENT1</option>
+          <option disabled selected>DEPARTMENT2</option>
           <option>SWEATER</option>
           <option>OUTERWEAR</option>
           <option>DRESS</option>
         </select>
         <select aria-placeholder="Department1">
-          <option disabled selected>DEPARTMENT1</option>
+          <option disabled selected>DEPARTMENT3</option>
           <option>SWEATER</option>
           <option>OUTERWEAR</option>
           <option>DRESS</option>
         </select>
         <select aria-placeholder="Department1">
-          <option disabled selected>DEPARTMENT1</option>
+          <option disabled selected>DEPARTMENT4</option>
           <option>SWEATER</option>
           <option>OUTERWEAR</option>
           <option>DRESS</option>
@@ -39,7 +39,7 @@
         <input type="number" />
       </div>
     </div>
-    <p class="plus" >+</p>
+    <!-- <p class="plus" >+</p> -->
     <button (click)="routeBack()">Done</button>
   </div>
 </div>

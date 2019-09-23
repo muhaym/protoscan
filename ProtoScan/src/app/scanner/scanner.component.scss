@@ -5,7 +5,17 @@
     width: 100%;
     height: 100vh;
     flex-direction: column;
+    background: #000026;
+    position: relative;
     .scanner {
-        width: 30%;
+        width: 75vw;
+    }
+    p {
+        position: absolute;
+        bottom: 15px;
+        background: #4d4d4d;
+        color: #fffffff7;
+        padding: 10px;
+        border-radius: 20px;
     }
 }
